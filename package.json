@@ -1,0 +1,28 @@
+{
+  "name": "mint-smartwash",
+  "version": "1.0.0",
+  "author": "Sebastián Marín",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "dev": "mix watch",
+    "build": "mix --production"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "fast-glob": "^3.2.12",
+    "gsap": "^3.11.3",
+    "laravel-mix": "^6.0.49",
+    "sass": "^1.56.1",
+    "sass-loader": "^12.1.0",
+    "swiper": "^8.4.4",
+    "tailwindcss": "^3.2.2"
+  },
+  "license": "ISC"
+}

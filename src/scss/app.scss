@@ -17,3 +17,11 @@
 @tailwind components;
 @tailwind utilities;
 /* Stop purging. */
+
+/* Global
+--------------------------------------------- */
+@import "./base/global";
+
+/* Blocks
+--------------------------------------------- */
+@import "./blocks/header";

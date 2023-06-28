@@ -9,6 +9,7 @@ module.exports = {
     "./src/js/**.js",
     "./src/js/**/**.js",
   ]),
+  blocklist: ["container"],
   theme: {
     colors: {
       ...colors,

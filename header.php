@@ -9,6 +9,11 @@
  * @package mint-smartwash
  */
 
+$logo = get_field('logo', 'options');
+
+$show_action_bar = get_field('show_action_bar', 'options');
+$action_bar_left_text = get_field('action_bar_left_text', 'options');
+$action_bar_right_text = get_field('action_bar_right_text', 'options');
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -20,40 +25,47 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("relative text-root-grey font-base font-normal antialiased"); ?>>
+
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'mint-smartwash' ); ?></a>
+<?php // include_once('template-parts/loader.php'); ?>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$mint_smartwash_description = get_bloginfo( 'description', 'display' );
-			if ( $mint_smartwash_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $mint_smartwash_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+<div id="page" class="relative">
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'mint-smartwash' ); ?></a>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mint-smartwash' ); ?></button>
+	<header id="header" class="header absolute top-0 inset-x-0 z-40">
+		<?php if($show_action_bar): ?>
+			<div class="header--action-bar bg-root-green text-white py-3">
+				<div class="container text-center lg:flex lg:justify-between lg:items-center">
+					<?php if($action_bar_left_text): ?>
+						<div class="header--action-bar__left rich-text text-lg lg:text-xl">
+							<?php echo $action_bar_left_text; ?>
+						</div>
+					<?php endif; ?>
+	
+					<?php if($action_bar_right_text): ?>
+						<div class="rich-text lg:text-lg">
+							<?php echo $action_bar_right_text; ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			</div>
+		<?php endif; ?>
+	</header>
+
+
+	<nav id="navigation" class="fixed top-0 inset-x-0 z-40 -translate-y-full bg-custom-black_light text-white pt-[6.438rem] pb-5 lg:pt-[8.25rem] lg:pb-6 navigation" aria-disabled="true">
+		<div class="custom-container lg:flex lg:justify-between">
+
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'main-navigation',
+						'container'       => 'ul',
+						'menu_class'      => 'flex flex-col navigation-main-menu',
+					)
+				);
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+
+		</div>
+	</nav>

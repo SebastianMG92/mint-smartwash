@@ -1,0 +1,17 @@
+.header {
+  &--action-bar {
+    &__left {
+      strong,
+      a {
+        font-size: rem-calc(16);
+      }
+
+      @media only screen and (min-width: theme("screens.lg")) {
+        strong,
+        a {
+          font-size: rem-calc(18);
+        }
+      }
+    }
+  }
+}

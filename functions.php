@@ -49,7 +49,8 @@ function mint_smartwash_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'mint-smartwash' ),
+			'main-navigation' => esc_html__( 'Main navigation', 'mint-smartwash' ),
+			'footer-navigation' => esc_html__( 'Footer navigation', 'mint-smartwash' ),
 		)
 	);
 
@@ -140,8 +141,9 @@ add_action( 'widgets_init', 'mint_smartwash_widgets_init' );
 function mint_smartwash_scripts() {
 	wp_enqueue_style( 'mint-smartwash-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'mint-smartwash-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'mint-smartwash-main-styles', get_template_directory_uri() . '/dist/app.css', '',  _S_VERSION);
 
-	wp_enqueue_script( 'mint-smartwash-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'mint-smartwash-js', get_template_directory_uri() . '/dist/app.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

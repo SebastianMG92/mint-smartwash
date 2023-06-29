@@ -28,8 +28,8 @@ $title_hours = get_field('title_hours', 'options');
 $hours = get_field('hours', 'options');
 ?>
 
-	<footer class="pt-10 md:pt-24">
-		<div class="container grid grid-cols-2 gap-10 pb-5 sm:grid-cols-3 md:grid-cols-12 md:gap-x-0 md:pb-24">
+	<footer class="relative pt-10 md:pt-24 footer">
+		<div class="relative z-10 container grid grid-cols-2 gap-10 pb-5 sm:grid-cols-3 md:grid-cols-12 md:gap-x-0 md:pb-24">
 			
 			<div class="col-span-2 sm:col-span-3 md:col-span-3">
 				<?php if($footer_logo): ?>
@@ -123,13 +123,16 @@ $hours = get_field('hours', 'options');
 		</div>
 
 		<?php if($copyright): ?>
-			<div class="container">
+			<div class="relative z-10 container">
 				<div class="py-5 border-t text-center text-root-grey-secondary md:py-10">
 					<?php echo $copyright; ?>
 				</div>
 			</div>
 		<?php endif; ?>
 
+		<figure class="absolute inset-0 z-0 opacity-10">
+			<img role="presentation" class="w-full h-full object-cover object-center" src="<?php echo get_template_directory_uri(); ?>/dist/FooterPhoto.png" />
+		</figure>
 	</footer>
 </div>
 

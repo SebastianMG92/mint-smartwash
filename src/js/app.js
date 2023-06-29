@@ -25,7 +25,9 @@ class App {
     new Header();
     new Locations();
 
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
     // Init loading
     this._init();
   }

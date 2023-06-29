@@ -8,12 +8,11 @@ $icons = get_sub_field( "icons" );
 
 <div class="relative pt-64 bg-root-blue text-white lg:pb-16">
 
-    <div class="container">
+    <div class="container relative z-10">
         <div class="max-w-xl mx-auto lg:mr-auto lg:ml-0">
             <?php if($title): ?>
                 <div 
                     class="text-center text-4xl font-bold mb-3 md:text-5xl lg:text-left rich-text hero--title"
-                    data-aos="fade-in"
                 >
                     <?php echo $title; ?>
                 </div>
@@ -59,11 +58,17 @@ $icons = get_sub_field( "icons" );
 
     </div>
     
+    <figure class="z-0 pointer-events-none w-full absolute bottom-0 right-0 w-9/12 ml-auto left-0 max-w-none lg:w-4/12 xl:w-5/12">
+        <img class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.png" role="presentation" />
+    </figure>
+
     <?php if($hero_image): ?>
-        <figure class="z-1 pointer-events-none w-full max-w-3xl ml-auto lg:absolute lg:bottom-0 lg:right-0 lg:max-w-none lg:w-6/12 xl:w-7/12">
+        <figure class="relative z-0 pointer-events-none w-full max-w-3xl ml-auto lg:absolute lg:bottom-0 lg:right-0 lg:max-w-none lg:w-6/12 xl:w-7/12">
             <img role="presentation" class="w-full object-contain object-center" src="<?php echo esc_url($hero_image['url']); ?>" alt="<?php echo esc_attr($hero_image['alt']); ?>" />
         </figure>
     <?php endif; ?>
+
+
 </div>
 
 

@@ -1,0 +1,19 @@
+.button {
+  padding: rem-calc(9) rem-calc(15);
+  border-radius: rem-calc(5);
+
+  @media only screen and (min-width: theme("screens.lg")) {
+    padding: rem-calc(15) rem-calc(30);
+  }
+
+  &__green {
+    color: white;
+    background-color: $green;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -14,4 +14,12 @@
       }
     }
   }
+
+  &--logo {
+    max-width: rem-calc(80);
+
+    @media only screen and (min-width: theme("screens.md")) {
+      max-width: rem-calc(100);
+    }
+  }
 }

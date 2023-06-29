@@ -182,3 +182,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * ACF Config
  */
 require get_template_directory() . '/inc/acf-config.php';
+
+/**
+ * Render Icon SVG
+ */
+function render_icon( $icon_name, $classes = '' ) {
+	$icon = file_get_contents(get_template_directory_uri() . '/src/icons/' . $icon_name . '.svg');	
+	$icon = str_replace('$CLASS', $classes, $icon);
+	echo $icon;
+}
+add_action( 'get_icon', 'render_icon', 10, 2);

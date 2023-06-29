@@ -32,6 +32,12 @@ get_header();
                             <?php get_template_part( 'template-parts/parts/section', 'locations'); ?>
                         </section>
                     <?php break; ?>
+
+                    <?php case "text_image": ?>
+                        <section id="custom-template-<?php echo get_row_layout() . "-" . $iteration; ?>">
+                            <?php get_template_part( 'template-parts/parts/section', 'text-image'); ?>
+                        </section>
+                    <?php break; ?>
                     
                 <?php endswitch; ?>
 

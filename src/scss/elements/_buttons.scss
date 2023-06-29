@@ -12,6 +12,11 @@
     background-color: $green;
   }
 
+  &__blue {
+    color: white;
+    background-color: $blue;
+  }
+
   &__icon {
     display: flex;
     align-items: center;

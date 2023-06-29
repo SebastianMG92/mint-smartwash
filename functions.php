@@ -184,6 +184,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/acf-config.php';
 
 /**
+ * Custom Post Types
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
+
+/**
  * Render Icon SVG
  */
 function render_icon( $icon_name, $classes = '' ) {

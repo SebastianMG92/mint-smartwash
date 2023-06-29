@@ -2,7 +2,7 @@
 $cards = get_sub_field( "cards" );
 ?>
 
-<div class="container py-10 lg:py-20">
+<div class="container py-10 lg:py-24">
     <?php if( $cards ): ?>	
         <div class="grid gap-10 sm:grid-cols-2">
             <?php foreach( $cards as $name=>$card ): 

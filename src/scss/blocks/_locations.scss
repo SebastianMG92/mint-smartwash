@@ -1,0 +1,61 @@
+.locations {
+  &--location {
+    margin-top: rem-calc(8);
+    margin-bottom: rem-calc(8);
+
+    &-image {
+      position: relative;
+
+      &::after {
+        content: "";
+        z-index: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(37, 37, 37, 0.8) 0%,
+          rgba(37, 37, 37, 0) 100%
+        );
+      }
+    }
+
+    &-box {
+    }
+  }
+
+  &--slide {
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      width: rem-calc(20);
+
+      @media only screen and (min-width: theme("screens.md")) {
+        width: rem-calc(80);
+      }
+
+      @media only screen and (min-width: theme("screens.md")) {
+        width: rem-calc(180);
+      }
+    }
+
+    &::after {
+      left: 0;
+      background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &::before {
+      right: 0;
+      background: linear-gradient(-90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+}

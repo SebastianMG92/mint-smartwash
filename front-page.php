@@ -21,14 +21,18 @@ get_header();
                     </section>
                     <?php break; ?>
 
-
                     <?php case "cards": ?>
                         <section id="custom-template-<?php echo get_row_layout() . "-" . $iteration; ?>">
                             <?php get_template_part( 'template-parts/parts/section', 'cards'); ?>
                         </section>
                     <?php break; ?>
 
-
+                    <?php case "locations": ?>
+                        <section id="custom-template-<?php echo get_row_layout() . "-" . $iteration; ?>">
+                            <?php get_template_part( 'template-parts/parts/section', 'locations'); ?>
+                        </section>
+                    <?php break; ?>
+                    
                 <?php endswitch; ?>
 
             <?php $iteration++; endwhile; // End of the loop. ?>

@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== "development") {
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Locations from "./lib/Locations";
 
 import Swiper, { Pagination, Autoplay, Navigation } from "swiper";
 
@@ -18,12 +19,8 @@ class App {
     // Add App to window object to use in external cases
     window.$APP = this;
 
-    // Set Main Dependencies to Global State
-    window.$APP.gsap = gsap;
-    window.$APP.Swiper = Swiper;
-    window.$APP.Swiper.Pagination = Pagination;
-    window.$APP.Swiper.Autoplay = Autoplay;
-    window.$APP.Swiper.Navigation = Navigation;
+    // Sections
+    new Locations();
 
     // Init loading
     this._init();

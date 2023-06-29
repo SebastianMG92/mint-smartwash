@@ -9,19 +9,19 @@ $locations = get_sub_field( "location" );
 
     <div class="container text-center mb-10">
         <?php if($title): ?>
-            <h2 class="text-root-blue font-bold text-2xl lg:text-4xl">
+            <h2 class="text-root-blue font-bold text-2xl lg:text-4xl" data-aos="fade-up">
                 <?php echo $title; ?>
             </h2>
         <?php endif; ?>
 
         <?php if($subtitle): ?>
-            <p class="mt-4 text-root-grey-secondary font-semibold text-lg lg:text-2xl">
+            <p class="mt-4 text-root-grey-secondary font-semibold text-lg lg:text-2xl" data-aos="fade-up">
                 <?php echo $subtitle; ?>
             </p>
         <?php endif; ?>
     </div>
 
-    <div data-slider class="swiper w-full locations--slide">
+    <div data-slider class="swiper w-full locations--slide" data-aos="fade-up">
         <div class="swiper-wrapper">
             <?php foreach( $locations as $location ) : 
                 $location_name = $location->post_title;
@@ -34,7 +34,7 @@ $locations = get_sub_field( "location" );
     
             ?>
                 <div class="swiper-slide">
-                    <div class="shadow-md p-1.5 rounded-2xl locations--location">
+                    <div class="shadow-md p-1.5 rounded-2xl group locations--location">
                         <?php if($feature_image): ?>
                             <figure class="relative rounded-t-2xl overflow-hidden locations--location-image">
                                 <img class="block object-cover h-full w-full" src="<?php echo $feature_image; ?>" alt="<?php echo $location_name; ?>" />
@@ -75,15 +75,15 @@ $locations = get_sub_field( "location" );
                                 </div>
                             </div>
                 
-                            <div class="lg:max-h-0 overflow-hidden">
+                            <div class="lg:max-h-0 overflow-hidden ease-in duration-150 lg:group-hover:max-h-36">
                                 <div class="pt-4 border-t border-root-grey-secondary">
                                     <div class="flex items-start">
                                         <?php if($phone): ?>
                                             <?php do_action("get_icon", "phone", "block w-6 text-root-blue mt-px"); ?>
                                             <div class="ml-3.5">
-                                                <div>
+                                                <a href="tel:<?php echo $phone; ?>">
                                                     <?php echo $phone; ?>
-                                                </div>
+                                                </a>
                                             </div>
                                         <?php endif; ?>
                                     </div>
@@ -124,9 +124,9 @@ $locations = get_sub_field( "location" );
         </div>
     </div>
 
-    <div class="container flex justify-center lg:mt">
+    <div class="container flex justify-center lg:mt" data-aos="fade-up">
         <?php if($link): ?>
-            <a class="max-w-fit mt-10 font-semibold text-lg button button__green button__icon" href="<?php echo $link["url"] ?>" <?php if ( ! empty( $link["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
+            <a class="max-w-fit mt-10 font-semibold text-lg button button__green button__icon button__icon-top" href="<?php echo $link["url"] ?>" <?php if ( ! empty( $link["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
                 <div class="mr-5 md:mr-6">
                     <?php echo $link["title"]; ?>
                 </div>

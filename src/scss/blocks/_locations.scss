@@ -23,7 +23,10 @@
       }
     }
 
-    &-box {
+    &-content {
+      @media only screen and (min-width: theme("screens.lg")) {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+      }
     }
   }
 

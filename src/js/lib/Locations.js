@@ -36,6 +36,8 @@ class Slider {
       },
     };
 
+    const elements = slider.querySelectorAll(".locations--location");
+
     new Swiper(slider, config);
   }
 }

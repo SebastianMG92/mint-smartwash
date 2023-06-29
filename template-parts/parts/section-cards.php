@@ -10,7 +10,7 @@ $cards = get_sub_field( "cards" );
                 $link = $card["link"];
                 $align_center = $card["align_image_to_center"];
             ?>
-                <div data-aos="slide-up">
+                <div data-aos="fade-up">
                     <a 
                         class="flex items-center relative bg-root-green text-white rounded-xl duration-150 ease-in-out group hover:bg-root-green-tertiary" href="<?php echo $link["url"] ?>" <?php if ( ! empty( $link["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>
                         

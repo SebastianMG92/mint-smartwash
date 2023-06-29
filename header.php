@@ -32,7 +32,7 @@ $cta_link = get_field('cta_link', 'options');
 <?php wp_body_open(); ?>
 <?php // include_once('template-parts/loader.php'); ?>
 
-<div id="page" class="relative bg-root-blue">
+<div id="page" class="relative">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'mint-smartwash' ); ?></a>
 
 	<header id="header" class="header absolute top-0 inset-x-0 z-40">

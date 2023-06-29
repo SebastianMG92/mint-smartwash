@@ -1,6 +1,7 @@
 .button {
   padding: rem-calc(9) rem-calc(15);
   border-radius: rem-calc(5);
+  line-height: 1;
 
   @media only screen and (min-width: theme("screens.lg")) {
     padding: rem-calc(15) rem-calc(30);

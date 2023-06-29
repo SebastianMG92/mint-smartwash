@@ -34,7 +34,7 @@ $hours = get_field('hours', 'options');
 			<div class="col-span-2 sm:col-span-3 md:col-span-3">
 				<?php if($footer_logo): ?>
 					<figure class="block mx-auto w-40 md:mr-auto md:ml-0 lg:w-fit">
-                        <img loading="lazy" class="block w-full" src="<?php echo esc_url($footer_logo['url']); ?>" alt="<?php echo esc_attr($footer_logo['alt']); ?>" />
+                        <img class="block w-full" src="<?php echo esc_url($footer_logo['url']); ?>" alt="<?php echo esc_attr($footer_logo['alt']); ?>" />
                     </figure>
 				<?php endif; ?>
 
@@ -46,25 +46,25 @@ $hours = get_field('hours', 'options');
 
 				<div class="mt-6 flex justify-center md:justify-start">
 					<?php if($facebook): ?>	
-						<a class="mr-5 last:mr-0" href="<?php echo $facebook["url"] ?>" <?php if ( ! empty( $facebook["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
+						<a aria-label="Go to Facebook" class="mr-5 last:mr-0" href="<?php echo $facebook["url"] ?>" <?php if ( ! empty( $facebook["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
 							<?php do_action("get_icon", "facebook", "block w-8 lg:w-9"); ?>
 						</a>
 					<?php endif; ?>
 
 					<?php if($instagram): ?>	
-						<a class="mr-5 last:mr-0" href="<?php echo $instagram["url"] ?>" <?php if ( ! empty( $instagram["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
+						<a aria-label="Go to Instagram" class="mr-5 last:mr-0" href="<?php echo $instagram["url"] ?>" <?php if ( ! empty( $instagram["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
 							<?php do_action("get_icon", "instagram", "block w-8 lg:w-9"); ?>
 						</a>
 					<?php endif; ?>
 
 					<?php if($twitter): ?>	
-						<a class="mr-5 last:mr-0" href="<?php echo $twitter["url"] ?>" <?php if ( ! empty( $twitter["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
+						<a aria-label="Go to Twitter" class="mr-5 last:mr-0" href="<?php echo $twitter["url"] ?>" <?php if ( ! empty( $twitter["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
 							<?php do_action("get_icon", "twitter", "block w-8 lg:w-9"); ?>
 						</a>
 					<?php endif; ?>
 
 					<?php if($whatsapp): ?>	
-						<a class="mr-5 text-white last:mr-0" href="<?php echo $whatsapp["url"] ?>" <?php if ( ! empty( $whatsapp["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
+						<a aria-label="Go to Whatsapp" class="mr-5 text-white last:mr-0" href="<?php echo $whatsapp["url"] ?>" <?php if ( ! empty( $whatsapp["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
 							<?php do_action("get_icon", "whatsapp", "block w-8 lg:w-9"); ?>
 						</a>
 					<?php endif; ?>
@@ -74,9 +74,9 @@ $hours = get_field('hours', 'options');
 
 			<div class="sm:col-span-1 md:col-start-5 md:col-end-8">
 				<?php if($title_company): ?>
-					<h6 class="text-root-green font-bold text-lg mb-5 lg:mb-7">
+					<p class="text-root-green font-bold text-lg mb-5 lg:mb-7">
 						<?php echo $title_company; ?>
-					</h6>
+					</p>
 				<?php endif; ?>
 
 				<?php
@@ -92,9 +92,9 @@ $hours = get_field('hours', 'options');
 
 			<div class="sm:col-span-1 md:col-span-3">
 				<?php if($title_find_us): ?>
-					<h6 class="text-root-green font-bold text-lg mb-5 lg:mb-7">
+					<p class="text-root-green font-bold text-lg mb-5 lg:mb-7">
 						<?php echo $title_find_us; ?>
-					</h6>
+					</p>
 				<?php endif; ?>
 
 				<?php if($find_us): ?>
@@ -107,9 +107,9 @@ $hours = get_field('hours', 'options');
 
 			<div class="col-span-2 sm:col-span-1 md:col-span-2">
 				<?php if($title_hours): ?>
-					<h6 class="text-root-green font-bold text-lg mb-5 lg:mb-7">
+					<p class="text-root-green font-bold text-lg mb-5 lg:mb-7">
 						<?php echo $title_hours; ?>
-					</h6>
+					</p>
 				<?php endif; ?>
 
 				<?php if($hours): ?>
@@ -131,7 +131,7 @@ $hours = get_field('hours', 'options');
 		<?php endif; ?>
 
 		<figure class="absolute inset-0 z-0 opacity-10">
-			<img loading="lazy" role="presentation" class="w-full h-full object-cover object-center" src="<?php echo get_template_directory_uri(); ?>/dist/FooterPhoto.png" />
+			<img  role="presentation" class="w-full h-full object-cover object-center" src="<?php echo get_template_directory_uri(); ?>/dist/FooterPhoto.webp" />
 		</figure>
 	</footer>
 </div>

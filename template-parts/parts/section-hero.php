@@ -45,7 +45,7 @@ $icons = get_sub_field( "icons" );
                     ?>
                         <div class="text-center">
                             <figure class="w-10 h-10 mx-auto mb-3 lg:w-16 lg:h-16">
-                                <img loading="lazy" class="object-contain object-center" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <img  class="object-contain object-center" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                             </figure>
                             <p class="text-sm lg:text-base">
                                 <?php echo $description; ?>
@@ -59,12 +59,12 @@ $icons = get_sub_field( "icons" );
     </div>
     
     <figure class="z-0 pointer-events-none w-full absolute bottom-0 right-0 w-9/12 ml-auto left-0 max-w-none lg:w-4/12 xl:w-5/12">
-        <img loading="lazy" class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.png" role="presentation" />
+        <img  class="mx-auto" src="<?php echo get_template_directory_uri(); ?>/dist/Lightblue.webp" role="presentation" />
     </figure>
 
     <?php if($hero_image): ?>
         <figure class="relative z-0 pointer-events-none w-full max-w-3xl ml-auto lg:absolute lg:bottom-0 lg:right-0 lg:max-w-none lg:w-6/12 xl:w-7/12">
-            <img loading="lazy" role="presentation" class="w-full object-contain object-center" src="<?php echo esc_url($hero_image['url']); ?>" alt="<?php echo esc_attr($hero_image['alt']); ?>" />
+            <img  role="presentation" class="w-full object-contain object-center" src="<?php echo esc_url($hero_image['url']); ?>" alt="<?php echo esc_attr($hero_image['alt']); ?>" />
         </figure>
     <?php endif; ?>
 

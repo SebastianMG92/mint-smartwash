@@ -61,8 +61,8 @@ $cta_link = get_field('cta_link', 'options');
 				<div class="basis-1/3">
 					<?php if($logo): ?>
 						<figure class="header--logo">
-							<a class="block" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<img loading="lazy" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+							<a class="block" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Go to homepage">
+								<img  src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
 							</a>
 						</figure>
 					<?php endif; ?>
@@ -70,7 +70,7 @@ $cta_link = get_field('cta_link', 'options');
 	
 				<div class="flex justify-end basis-2/3 items-center">
 					<?php if($cta_link): ?>
-						<a class="button button__green button__icon button__icon-top mr-5 font-semibold text-lg" href="<?php echo $cta_link["url"] ?>" <?php if ( ! empty( $cta_link["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
+						<a aria-label="Go to <?php echo $cta_link["title"]; ?>" class="button button__green button__icon button__icon-top mr-5 font-semibold text-lg" href="<?php echo $cta_link["url"] ?>" <?php if ( ! empty( $cta_link["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
 							<div class="hidden mr-5 md:block">
 								<?php echo $cta_link["title"]; ?>
 							</div>
@@ -78,7 +78,7 @@ $cta_link = get_field('cta_link', 'options');
 						</a>
 					<?php endif; ?>
 	
-					<button type="button" class="p-2 text-white header--hamburger">
+					<button type="button" class="p-2 text-white header--hamburger" aria-label="open navigation">
 						<?php do_action("get_icon", "hamburger", "block w-7 md:w-12"); ?>
 					</button>
 				</div>
@@ -87,10 +87,10 @@ $cta_link = get_field('cta_link', 'options');
 	</header>
 
 
-	<nav id="navigation" class="fixed inset-0 z-50 bg-root-blue text-white header--navigation" aria-disabled="true">
+	<nav id="navigation" class="fixed inset-0 z-50 bg-root-blue text-white header--navigation">
 		<div class="relative z-10 container pt-[9.375rem] pb-10 h-full md:pt-[7.0625rem] lg:pt-28">
 			<div class="flex justify-end text-white">
-				<button type="button" class="header--close-button">
+				<button type="button" class="header--close-button" aria-label="close navigation">
 					<?php do_action("get_icon", "close", "block w-7 md:w-12"); ?>
 				</button>
 			</div>
@@ -109,6 +109,6 @@ $cta_link = get_field('cta_link', 'options');
 		</div>
 
 		<figure class="pointer-events-none absolute inset-x-0 bottom-0 top-1/3 z-0 opacity-40">
-			<img loading="lazy" class="mx-auto w-full h-full object-cover object-top" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.png" role="presentation" />
+			<img  class="mx-auto w-full h-full object-cover object-top" src="<?php echo get_template_directory_uri(); ?>/dist/Lightblue.webp" role="presentation" />
 		</figure>
 	</nav>

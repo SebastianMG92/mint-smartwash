@@ -8,7 +8,7 @@ class Loader {
 
   async loadContent(cb) {
     try {
-      await Promise.all(
+      await Promise.allSettled(
         Array.from(this.images)
           .filter((img) => !img.complete)
           .map(

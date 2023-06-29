@@ -16,7 +16,7 @@ $cards = get_sub_field( "cards" );
                         
                     >
                         <figure class="block relative basis-4/12 h-full md:basis-5/12 <?php if ( $align_center ): ?>cards--card-image__center<?php else: ?>cards--card-image__left<?php endif; ?>">
-                            <img class="block absolute top-1/2 -translate-y-1/2" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <img loading="lazy" class="block absolute top-1/2 -translate-y-1/2" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                         </figure>
 
                         <div class="flex items-center justify-between basis-8/12 px-3 py-5 md:basis-7/12 lg:pr-3 lg:py-7 xl:pr-7">

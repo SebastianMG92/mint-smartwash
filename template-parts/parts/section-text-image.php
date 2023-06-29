@@ -44,18 +44,18 @@ $link = get_sub_field( "link" );
 
 
     <?php if($image_right): ?>
-        <img class="absolute z-0 -right-32 lg:-right-44 bottom-0" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.png" role="presentation" />
+        <img loading="lazy" class="absolute z-0 -right-32 lg:-right-44 bottom-0" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.png" role="presentation" />
 
         <?php else: ?>
 
-        <img class="absolute z-0 inset-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/dist/blue-design.png" role="presentation" />
+        <img loading="lazy" class="absolute z-0 inset-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/dist/blue-design.png" role="presentation" />
 
     <?php endif; ?>
 
     <div class="mt-10 md:w-6/12 md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 <?php if($image_right): ?>md:right-0<?php else: ?>md:left-0<?php endif; ?>">
         <?php if($image): ?>
             <figure class="relative z-0 w-full">
-                <img class="<?php if($image_right): ?>ml-auto<?php else: ?>mr-auto<?php endif; ?>" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <img loading="lazy" class="<?php if($image_right): ?>ml-auto<?php else: ?>mr-auto<?php endif; ?>" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             </figure>
         <?php endif; ?>
     </div>

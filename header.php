@@ -30,10 +30,12 @@ $cta_link = get_field('cta_link', 'options');
 <body <?php body_class("relative text-root-grey font-base font-normal antialiased"); ?>>
 
 <?php wp_body_open(); ?>
-<?php // include_once('template-parts/loader.php'); ?>
-
 <div id="page" class="relative">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'mint-smartwash' ); ?></a>
+	<!-- Loader -->
+	<div data-loader class="fixed inset-0 z-[100] bg-root-blue loader">
+		<div class="loader--spinner">
+		</div>
+	</div>
 
 	<header id="header" class="header absolute top-0 inset-x-0 z-40">
 		<?php if($show_action_bar): ?>
@@ -60,7 +62,7 @@ $cta_link = get_field('cta_link', 'options');
 					<?php if($logo): ?>
 						<figure class="header--logo">
 							<a class="block" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+								<img loading="lazy" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
 							</a>
 						</figure>
 					<?php endif; ?>
@@ -107,6 +109,6 @@ $cta_link = get_field('cta_link', 'options');
 		</div>
 
 		<figure class="pointer-events-none absolute inset-x-0 bottom-0 top-1/3 z-0 opacity-40">
-			<img class="mx-auto w-full h-full object-cover object-top" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.png" role="presentation" />
+			<img loading="lazy" class="mx-auto w-full h-full object-cover object-top" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.png" role="presentation" />
 		</figure>
 	</nav>

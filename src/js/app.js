@@ -10,11 +10,9 @@ import "aos/dist/aos.css";
 
 import Header from "./lib/Header";
 import Locations from "./lib/Locations";
+import Loader from "./lib/Loader";
 
 gsap.registerPlugin(ScrollTrigger);
-
-// Components
-const COMPONENTS = [];
 
 class App {
   constructor() {
@@ -22,42 +20,19 @@ class App {
     window.$APP = this;
 
     // Sections
-    new Header();
-    new Locations();
+    this.loader = new Loader();
 
+    // Init loading
+    this.loader.loadContent(this.init);
+  }
+
+  init() {
     AOS.init({
       once: true,
     });
-    // Init loading
-    this._init();
-  }
 
-  async _init() {
-    this._runComponents();
-  }
-
-  _runComponents() {
-    if (!COMPONENTS.length) return null;
-
-    COMPONENTS.forEach((Component) => {
-      // Get DOM elements
-      const htmlContainers = document.querySelectorAll(
-        `[data-component="${Component}"]`
-      );
-      if (!!htmlContainers.length)
-        this._loadComponent(Component, htmlContainers);
-    });
-  }
-
-  async _loadComponent(ClassComponentName, htmlContainers) {
-    // Dynamic component import
-    const { default: ClassComponent } = await import(
-      `./lib/${ClassComponentName}`
-    );
-
-    htmlContainers.forEach((container) => {
-      new ClassComponent(this, container);
-    });
+    new Header();
+    new Locations();
   }
 }
 

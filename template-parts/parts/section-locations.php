@@ -37,7 +37,7 @@ $locations = get_sub_field( "location" );
                     <div class="shadow-md p-1.5 rounded-2xl group locations--location">
                         <?php if($feature_image): ?>
                             <figure class="relative rounded-t-2xl overflow-hidden locations--location-image">
-                                <img class="block object-cover h-full w-full" src="<?php echo $feature_image; ?>" alt="<?php echo $location_name; ?>" />
+                                <img loading="lazy" class="block object-cover h-full w-full" src="<?php echo $feature_image; ?>" alt="<?php echo $location_name; ?>" />
         
                                 <div class="absolute top-3 left-3 text-white z-10 flex locations--location-box">
                                     <?php if($distance): ?>

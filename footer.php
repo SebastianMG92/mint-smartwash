@@ -34,7 +34,7 @@ $hours = get_field('hours', 'options');
 			<div class="col-span-2 sm:col-span-3 md:col-span-3">
 				<?php if($footer_logo): ?>
 					<figure class="block mx-auto w-40 md:mr-auto md:ml-0 lg:w-fit">
-                        <img class="block w-full" src="<?php echo esc_url($footer_logo['url']); ?>" alt="<?php echo esc_attr($footer_logo['alt']); ?>" />
+                        <img loading="lazy" class="block w-full" src="<?php echo esc_url($footer_logo['url']); ?>" alt="<?php echo esc_attr($footer_logo['alt']); ?>" />
                     </figure>
 				<?php endif; ?>
 
@@ -131,7 +131,7 @@ $hours = get_field('hours', 'options');
 		<?php endif; ?>
 
 		<figure class="absolute inset-0 z-0 opacity-10">
-			<img role="presentation" class="w-full h-full object-cover object-center" src="<?php echo get_template_directory_uri(); ?>/dist/FooterPhoto.png" />
+			<img loading="lazy" role="presentation" class="w-full h-full object-cover object-center" src="<?php echo get_template_directory_uri(); ?>/dist/FooterPhoto.png" />
 		</figure>
 	</footer>
 </div>

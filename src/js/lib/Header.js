@@ -1,4 +1,3 @@
-import { addClickEventListener } from "../utils/listeners";
 import { gsap } from "gsap";
 
 class Header {

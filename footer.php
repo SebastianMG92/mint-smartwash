@@ -34,7 +34,7 @@ $hours = get_field('hours', 'options');
 			<div class="col-span-2 sm:col-span-3 md:col-span-3">
 				<?php if($footer_logo): ?>
 					<figure class="block mx-auto w-40 md:mr-auto md:ml-0 lg:w-fit">
-                        <img class="block w-full" src="<?php echo esc_url($footer_logo['url']); ?>" alt="<?php echo esc_attr($footer_logo['alt']); ?>" />
+                        <img width="230" height="122" class="block w-full" src="<?php echo esc_url($footer_logo['url']); ?>" alt="<?php echo esc_attr($footer_logo['alt']); ?>" />
                     </figure>
 				<?php endif; ?>
 

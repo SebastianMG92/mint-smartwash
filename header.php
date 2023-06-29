@@ -62,7 +62,7 @@ $cta_link = get_field('cta_link', 'options');
 					<?php if($logo): ?>
 						<figure class="header--logo">
 							<a class="block" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="Go to homepage">
-								<img  src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+								<img width="100" height="93" src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
 							</a>
 						</figure>
 					<?php endif; ?>
@@ -109,6 +109,6 @@ $cta_link = get_field('cta_link', 'options');
 		</div>
 
 		<figure class="pointer-events-none absolute inset-x-0 bottom-0 top-1/3 z-0 opacity-40">
-			<img  class="mx-auto w-full h-full object-cover object-top" src="<?php echo get_template_directory_uri(); ?>/dist/Lightblue.webp" role="presentation" />
+			<img  class="mx-auto w-full h-full object-cover object-top" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.webp" role="presentation" />
 		</figure>
 	</nav>

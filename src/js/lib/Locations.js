@@ -37,8 +37,6 @@ class Slider {
     };
 
     new Swiper(slider, config);
-
-    console.log(slider);
   }
 }
 

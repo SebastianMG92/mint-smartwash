@@ -47,25 +47,25 @@ $hours = get_field('hours', 'options');
 				<div class="mt-6 flex justify-center md:justify-start">
 					<?php if($facebook): ?>	
 						<a class="mr-5 last:mr-0" href="<?php echo $facebook["url"] ?>" <?php if ( ! empty( $facebook["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
-							<?php do_action("get_icon", "facebook", "block w-8"); ?>
+							<?php do_action("get_icon", "facebook", "block w-8 lg:w-9"); ?>
 						</a>
 					<?php endif; ?>
 
 					<?php if($instagram): ?>	
 						<a class="mr-5 last:mr-0" href="<?php echo $instagram["url"] ?>" <?php if ( ! empty( $instagram["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
-							<?php do_action("get_icon", "instagram", "block w-8"); ?>
+							<?php do_action("get_icon", "instagram", "block w-8 lg:w-9"); ?>
 						</a>
 					<?php endif; ?>
 
 					<?php if($twitter): ?>	
 						<a class="mr-5 last:mr-0" href="<?php echo $twitter["url"] ?>" <?php if ( ! empty( $twitter["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
-							<?php do_action("get_icon", "twitter", "block w-8"); ?>
+							<?php do_action("get_icon", "twitter", "block w-8 lg:w-9"); ?>
 						</a>
 					<?php endif; ?>
 
 					<?php if($whatsapp): ?>	
 						<a class="mr-5 text-white last:mr-0" href="<?php echo $whatsapp["url"] ?>" <?php if ( ! empty( $whatsapp["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
-							<?php do_action("get_icon", "whatsapp", "block w-8"); ?>
+							<?php do_action("get_icon", "whatsapp", "block w-8 lg:w-9"); ?>
 						</a>
 					<?php endif; ?>
 				</div>

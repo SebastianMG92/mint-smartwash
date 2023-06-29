@@ -19,6 +19,16 @@ get_header();
                     <section id="custom-template-<?php echo get_row_layout() . "-" . $iteration; ?>">
                         <?php get_template_part( 'template-parts/parts/section', 'hero'); ?>
                     </section>
+                    <?php break; ?>
+
+
+                    <?php case "cards": ?>
+                        <section id="custom-template-<?php echo get_row_layout() . "-" . $iteration; ?>">
+                            <?php get_template_part( 'template-parts/parts/section', 'cards'); ?>
+                        </section>
+                    <?php break; ?>
+
+
                 <?php endswitch; ?>
 
             <?php $iteration++; endwhile; // End of the loop. ?>
@@ -28,5 +38,3 @@ get_header();
 
     <?php get_footer(); ?>
 </main><!-- #main -->
-
-<?php

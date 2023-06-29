@@ -31,7 +31,8 @@ mix
 mix
   .js(`${RESOURCES_DIR}/js/app.js`, DIST_DIR)
   .sass(`${RESOURCES_DIR}/scss/app.scss`, DIST_DIR)
-  .copyDirectory(`${RESOURCES_DIR}/fonts`, DIST_DIR);
+  .copyDirectory(`${RESOURCES_DIR}/fonts`, DIST_DIR)
+  .copyDirectory(`${RESOURCES_DIR}/images`, DIST_DIR);
 
 /* Browser sync configuration */
 mix.browserSync({

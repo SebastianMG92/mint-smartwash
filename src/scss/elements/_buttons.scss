@@ -10,6 +10,12 @@
   &__green {
     color: white;
     background-color: $green;
+    transition: 0.15s ease-in-out background-color;
+
+    &:hover,
+    &:focus {
+      background-color: $green-tertiary;
+    }
   }
 
   &__blue {
@@ -21,5 +27,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    svg {
+      transform: translateX(0);
+      transition: 0.15s ease-in-out transform;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: translateX(rem-calc(5));
+      }
+    }
+
+    &-top {
+      svg {
+        transform: translateY(0);
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          transform: translateY(rem-calc(-3));
+        }
+      }
+    }
   }
 }

@@ -11,7 +11,10 @@ $icons = get_sub_field( "icons" );
     <div class="container">
         <div class="max-w-xl mx-auto lg:mr-auto lg:ml-0">
             <?php if($title): ?>
-                <div class="text-center text-4xl font-bold mb-3 md:text-5xl lg:text-left rich-text hero--title">
+                <div 
+                    class="text-center text-4xl font-bold mb-3 md:text-5xl lg:text-left rich-text hero--title"
+                    data-aos="fade-in"
+                >
                     <?php echo $title; ?>
                 </div>
             <?php endif; ?>

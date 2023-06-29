@@ -5,9 +5,11 @@ if (process.env.NODE_ENV !== "development") {
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Locations from "./lib/Locations";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import Swiper, { Pagination, Autoplay, Navigation } from "swiper";
+import Header from "./lib/Header";
+import Locations from "./lib/Locations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,8 +22,10 @@ class App {
     window.$APP = this;
 
     // Sections
+    new Header();
     new Locations();
 
+    AOS.init();
     // Init loading
     this._init();
   }

@@ -54,46 +54,59 @@ $cta_link = get_field('cta_link', 'options');
 			</div>
 		<?php endif; ?>
 
-		<div class="container flex justify-between items-center pt-9">
-			<div class="basis-1/3">
-				<?php if($logo): ?>
-					<figure class="header--logo">
-						<a class="block" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+		<div class="pt-9 inset-x-0 top-0 header--main">
+			<div class="container flex justify-between items-center">
+				<div class="basis-1/3">
+					<?php if($logo): ?>
+						<figure class="header--logo">
+							<a class="block" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" />
+							</a>
+						</figure>
+					<?php endif; ?>
+				</div>
+	
+				<div class="flex justify-end basis-2/3 items-center">
+					<?php if($cta_link): ?>
+						<a class="button button__green button__icon button__icon-top mr-5 font-semibold text-lg" href="<?php echo $cta_link["url"] ?>" <?php if ( ! empty( $cta_link["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
+							<div class="hidden mr-5 md:block">
+								<?php echo $cta_link["title"]; ?>
+							</div>
+							<?php do_action("get_icon", "location", "block w-4"); ?>
 						</a>
-					</figure>
-				<?php endif; ?>
-			</div>
-
-			<div class="flex justify-end basis-2/3 items-center">
-				<?php if($cta_link): ?>
-					<a class="button button__green button__icon mr-5 font-semibold text-lg" href="<?php echo $cta_link["url"] ?>" <?php if ( ! empty( $cta_link["target"] ) ): ?>target="_blank" rel="noopener noreferrer"<?php endif; ?>>
-						<div class="hidden mr-5 md:block">
-							<?php echo $cta_link["title"]; ?>
-						</div>
-						<?php do_action("get_icon", "location", "block w-4"); ?>
-					</a>
-				<?php endif; ?>
-
-				<button type="button" class="p-2 text-white">
-					<?php do_action("get_icon", "hamburger", "block w-7 md:w-12"); ?>
-				</button>
+					<?php endif; ?>
+	
+					<button type="button" class="p-2 text-white header--hamburger">
+						<?php do_action("get_icon", "hamburger", "block w-7 md:w-12"); ?>
+					</button>
+				</div>
 			</div>
 		</div>
 	</header>
 
 
-	<nav id="navigation" class="hidden" aria-disabled="true">
-		<div class="container">
+	<nav id="navigation" class="fixed inset-0 z-50 bg-root-blue text-white header--navigation" aria-disabled="true">
+		<div class="relative z-10 container pt-[9.375rem] pb-10 h-full md:pt-[7.0625rem] lg:pt-28">
+			<div class="flex justify-end text-white">
+				<button type="button" class="header--close-button">
+					<?php do_action("get_icon", "close", "block w-7 md:w-12"); ?>
+				</button>
+			</div>
 
-			<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'main-navigation',
-						'container'       => 'ul'
-					)
-				);
-			?>
-
+			<div class="text-center h-full flex justify-center pt-24">
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'main-navigation',
+							'container'       => 'ul',
+							'menu_class'      => 'text-2xl font-bold header--list md:text-4xl',
+						)
+					);
+				?>
+			</div>
 		</div>
+
+		<figure class="pointer-events-none absolute inset-x-0 bottom-0 top-1/3 z-0 opacity-40">
+			<img class="mx-auto w-full h-full object-cover object-top" src="<?php echo get_template_directory_uri(); ?>/dist/LightBlue.png" role="presentation" />
+		</figure>
 	</nav>

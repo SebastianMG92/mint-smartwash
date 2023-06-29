@@ -1,0 +1,8 @@
+<svg 
+    aria-hidden="true"
+    focusable="false"
+    class="$CLASS"
+ viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="17.5" cy="17.5" r="17" fill="#F5F5F5" stroke="#D9D9D9"/>
+<path d="M19.6667 19.25H21.75L22.5833 15.9166H19.6667V14.25C19.6667 13.3916 19.6667 12.5833 21.3333 12.5833H22.5833V9.78329C22.3117 9.74746 21.2858 9.66663 20.2025 9.66663C17.94 9.66663 16.3333 11.0475 16.3333 13.5833V15.9166H13.8333V19.25H16.3333V26.3333H19.6667V19.25Z" fill="currentColor"/>
+</svg>
